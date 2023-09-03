@@ -1,18 +1,20 @@
-.btn{
-    margin-top: 50px;
-    border: 1px solid #ff5300;
-    color: #ff5300;
-    background: transparent;
-    padding: 10px 25px;
-    outline: none;
-    font-size: 1.5vw;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 300;
+@import "../../../mixins.scss";
 
-    &:hover {
-      background: #ff5300;
-      color: var(--text-color);
-      transition: all 1s;
-    }
+.btn {
+  margin-top: 50px;
+  border: 1px solid #ff5300;
+  color: #ff5300;
+  background: transparent;
+  padding: 10px 25px;
+  outline: none;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 300;
+
+  &:hover {
+    background: #ff5300;
+    color: var(--text-color);
+    transition: all 1s ease-in-out;
+  }
 }

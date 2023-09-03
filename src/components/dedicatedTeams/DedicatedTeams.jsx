@@ -1,7 +1,15 @@
 import React from "react";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import { Agile, DeepTech, PC, Regrep, Scale, TimeTrack } from "../../../constants";
-import "./dedicatedTeam.scss"
+import {
+  Agile,
+  DeepTech,
+  PC,
+  Regrep,
+  Scale,
+  TimeTrack,
+} from "../../../constants";
+import "./dedicatedTeam.scss";
+import Button from "../button/Button";
 
 const DedicatedTeams = () => {
   const dedicatedTeams = [
@@ -31,7 +39,7 @@ const DedicatedTeams = () => {
     },
   ];
   return (
-    <ContentWrapper>
+    <div className="dedicated-teams">
       <div className="heading">
         <h2>Only dedicated teams</h2>
         <p>
@@ -39,15 +47,21 @@ const DedicatedTeams = () => {
           control over management of the dedicated team members.
         </p>
       </div>
-      {dedicatedTeams.map((team) => {
-        return (
-          <div className="" key={team.title}>
-          <img src={team.image} alt="" />
-            <span>{team.title}</span>
-          </div>
-        );
-      })}
-    </ContentWrapper>
+      <div className="teams">
+        {dedicatedTeams?.map((team) => {
+          return (
+            <div className="team" key={team.title}>
+              <img src={team?.image} alt="" />
+              <span>{team?.title}</span>
+            </div>
+          );
+        })}
+      </div>
+      <Button>
+        See our services
+        <span>&rarr;</span>
+      </Button>
+    </div>
   );
 };
 

@@ -28,7 +28,7 @@ const WorkList = () => {
                     </div>
                     <p>{item?.para}</p>
                     <Button className="work-list__btn">
-                      See full case study
+                      See full case study &rarr;
                     </Button>
                   </div>
                   <div className="right">
@@ -50,7 +50,7 @@ const WorkList = () => {
                     </div>
                     <p>{item?.para}</p>
                     <Button className="work-list__btn">
-                      See full case study
+                      See full case study &rarr;
                     </Button>
                   </div>
                 </>

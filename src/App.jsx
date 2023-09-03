@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

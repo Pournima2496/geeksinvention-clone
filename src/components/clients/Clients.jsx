@@ -9,7 +9,7 @@ const Clients = () => {
     <ContentWrapper>
       <div className="clients">
         <div className="heading">
-          <h2>Recent clients</h2>
+          <h3>Recent clients</h3>
           <p>
             We worked with the Fortune 500 companies in the USA, Africa, UK,
             Middle East World's 4th Strongest Banking Brand, Automobile & IoT

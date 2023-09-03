@@ -1,0 +1,47 @@
+.dedicated-teams {
+  width: 100%;
+  padding: 150px 0;
+
+  .heading {
+    padding: 0 20%;
+
+    h2 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+    p {
+      margin-top: 40px;
+      font-size: 18px;
+      padding: 0 25px;
+      font-weight: 300;
+      color: #c5c2c2;
+    }
+  }
+
+  .teams {
+    padding: 100px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8rem;
+
+    .team {
+      width: 25%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        margin: 20px 0;
+        width: 70px;
+        height: 70px;
+      }
+
+      span {
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+  }
+}
