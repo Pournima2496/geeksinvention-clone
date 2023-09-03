@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../components/button/Button";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
-
+import "./footer.scss"
 const Footer = () => {
   const links = [
     "works",
@@ -14,6 +14,14 @@ const Footer = () => {
   ];
   return (
     <footer>
+      <div>
+        <h2>Get to know us better!</h2>
+        <p>
+          It is a pleasure to have you on our website. Let us know if there's an
+          opportunity to do something together.
+        </p>
+      </div>
+      <Button>Drop a message</Button>
       <ContentWrapper>
         <div>
           <h3>Geeks Invention</h3>
@@ -29,7 +37,7 @@ const Footer = () => {
           })}
         </ul>
       </ContentWrapper>
-      <Button title="Stay tuned for our updates" />
+      <Button>Stay tuned for our updates</Button>
       <div>
         © Copyright 2023 – Mobile App Design and Development Company. All Rights
         Reserved

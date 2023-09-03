@@ -1,30 +1,32 @@
 import React from "react";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
+import { Agile, DeepTech, PC, Regrep, Scale, TimeTrack } from "../../../constants";
+import "./dedicatedTeam.scss"
 
 const DedicatedTeams = () => {
   const dedicatedTeams = [
     {
-      image: "image",
+      image: Agile,
       title: "Agile approach",
     },
     {
-      image: "image",
+      image: DeepTech,
       title: "Deep tech expertise",
     },
     {
-      image: "image",
+      image: PC,
       title: "Personal commitment",
     },
     {
-      image: "image",
+      image: Regrep,
       title: "Regular reporting",
     },
     {
-      image: "image",
+      image: TimeTrack,
       title: "Time tracking",
     },
     {
-      image: "image",
+      image: Scale,
       title: "Scalability",
     },
   ];
@@ -40,6 +42,7 @@ const DedicatedTeams = () => {
       {dedicatedTeams.map((team) => {
         return (
           <div className="" key={team.title}>
+          <img src={team.image} alt="" />
             <span>{team.title}</span>
           </div>
         );

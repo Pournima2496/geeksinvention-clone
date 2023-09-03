@@ -2,13 +2,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  
+
+  .logo{
+    span{
+      color: #FF7903;
+    }
+  }
+
   .nav-items {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 2rem ;
+    gap: 2rem;
     text-transform: uppercase;
-    .nav-links {
+    font-size: 14px;
+
+    .nav-links a{
+      text-decoration: none;
     }
   }
 }

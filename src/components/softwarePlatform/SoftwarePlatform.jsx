@@ -1,30 +1,32 @@
 import React from "react";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
+import { Android, IOS, Web, Wear, TV, Hybrid } from "../../../constants";
+import "./softwarePlatform.scss"
 
 const SoftwarePlatform = () => {
   const softwarePlatforms = [
     {
-      image: "image",
+      image: Web,
       title: "Web",
     },
     {
-      image: "image",
+      image: IOS,
       title: "iOS",
     },
     {
-      image: "image",
+      image: Android,
       title: "Android",
     },
     {
-      image: "image",
+      image: Hybrid,
       title: "Hybrid",
     },
     {
-      image: "image",
+      image: Wear,
       title: "Wearables",
     },
     {
-      image: "image",
+      image: TV,
       title: "TV",
     },
   ];
@@ -38,6 +40,7 @@ const SoftwarePlatform = () => {
       {softwarePlatforms.map((sp) => {
         return (
           <div className="sp" key={sp.title}>
+            <img src={sp.image} />
             <span>{sp.title}</span>
           </div>
         );

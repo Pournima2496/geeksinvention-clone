@@ -1,0 +1,22 @@
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20%;
+  height: calc(100vh - 80px);
+  h2 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 8vh;
+  }
+  p {
+    margin-top: 5vh;
+    font-size: 1.4vw;
+    padding: 0 25px;
+    font-weight: 300;
+    color: #c5c2c2;
+  }
+ 
+}
