@@ -13,19 +13,25 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 20%;
+    padding: 30px;
     height: calc(100vh - 80px);
-    h2 {
-      font-size: 48px;
-      font-weight: 500;
-      line-height: 8vh;
+
+    @include md {
+      padding: 50px 80px;
     }
+    @include lg {
+      padding: 50px 20%;
+    }
+    
     p {
-      margin-top: 5vh;
-      font-size: 1.4vw;
-      padding: 0 25px;
+      margin-top: 20px;
+      font-size: 15px;
       font-weight: 300;
       color: #c5c2c2;
+    
+      @include md{
+        font-size: 18px;
+      }
     }
   }
 }

@@ -7,10 +7,14 @@
   background: transparent;
   padding: 10px 25px;
   outline: none;
-  font-size: 18px;
+  font-size: 14px;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 300;
+
+  @include md{
+    font-size: 18px;
+  }
 
   &:hover {
     background: #ff5300;

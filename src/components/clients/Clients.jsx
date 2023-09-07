@@ -13,7 +13,7 @@ const Clients = () => {
           <p>
             We worked with the Fortune 500 companies in the USA, Africa, UK,
             Middle East World's 4th Strongest Banking Brand, Automobile & IoT
-            industr
+            industries
           </p>
         </div>
         <div className="cards">

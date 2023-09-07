@@ -1,17 +1,28 @@
+@import "../../../mixins.scss";
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  padding: 10px 50px;
-  background: transparent;
-  position: sticky;
-  top: 0;
+  padding: 10px;
+  height: 40px;
+
+  position: fixed;
+  background: #000;
   width: 100%;
 
-  .logo{
-    span{
-      color: #FF7903;
+  @include lg {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 15px;
+    line-height: 1.2;
+    a {
+      text-decoration: none;
+    }
+    span {
+      color: #ff7903;
     }
   }
 
@@ -21,10 +32,46 @@
     list-style: none;
     gap: 2rem;
     text-transform: uppercase;
-    font-size: 14px;
-    margin-right: 100px;
+    @include lg {
+      margin-right: 100px;
+    }
 
-    .nav-links a{
+    .nav-links a {
+      display: none;
+      @include lg {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+      }
+    }
+  }
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 50px;
+
+    @include lg {
+      display: none;
+    }
+  }
+  .mobile-menu-items {
+    margin-top: 60px;
+    list-style: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-transform: uppercase;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    width: 100%;
+    top: 0;
+    left: -20px;
+    background: #333;
+
+    .nav-links a {
       text-decoration: none;
     }
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../components/button/Button";
 import "./footer.scss";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const links = [
     "works",
@@ -14,14 +15,14 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        <div className="heading">
+        <div className="heading top">
           <h2>Get to know us better!</h2>
           <p>
             It is a pleasure to have you on our website. Let us know if there's
             an opportunity to do something together.
           </p>
+          <Button>Drop a message</Button>
         </div>
-        <Button>Drop a message</Button>
         <div className="bottom">
           <div className="bottom-left">
             <div className="left">
@@ -36,7 +37,11 @@ const Footer = () => {
             </div>
             <ul className="middle">
               {links.map((link) => {
-                return <li key={link}>{link}</li>;
+                return (
+                  <li key={link}>
+                    <Link to="">{link}</Link>
+                  </li>
+                );
               })}
             </ul>
           </div>

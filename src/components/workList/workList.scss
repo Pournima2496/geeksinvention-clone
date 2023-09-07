@@ -1,48 +1,70 @@
 @import "../../../mixins.scss";
+@import "../../index.scss";
 
 .work-list {
   width: 100%;
+  // margin-top: 80px;
 
   .page {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 60px;
+    padding: 20px;
+
+    @include md {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    @include lg {
+      height: calc(100vh - 60px);
+    }
 
     .left,
     .right {
-      padding: 0 40px;
-      text-align: left;
+      @include md {
+        padding: 0 20px;
+        text-align: left;
+      }
     }
 
     img {
-      width: 500px;
-      height: 500px;
+      width: 350px;
+      height: 350px;
+
+      @include lg {
+        width: 500px;
+        height: 500px;
+      }
     }
 
-    h3 {
-      font-size: 60px;
-      font-weight: 500;
-    }
     h5 {
-      font-size: 32px;
+      font-size: 25px;
       font-weight: 400;
+
+      @include md {
+        font-size: 21px;
+      }
     }
+
     .tags {
+      // display: flex;
+      // align-items: center;
+      @extend .dflex;
+      font-size: 12px;
+      gap: 1rem;
       margin: 40px 0;
-      font-size: 14px;
-      display: flex;
-      flex-wrap: wrap;
     }
     p {
-      font-size: 18px;
-      padding-right: 20px;
+      font-size: 14px;
+      color: #fff;
+
+      @include md {
+        font-size: 16px;
+      }
     }
 
     .work-list__btn {
       color: var(--text-color);
       border: 1px solid var(--text-color);
-      font-size: 18px;
 
       &:hover {
         background-color: #fff;
@@ -59,8 +81,7 @@
       span {
         background-color: var(--first-tag);
         border-radius: 20px;
-        padding: 10px 15px;
-        margin-right: 10px;
+        padding: 8px 12px;
       }
       .work-list__btn {
         color: var(--text-color);
@@ -82,8 +103,7 @@
       span {
         background-color: var(--second-tag);
         border-radius: 20px;
-        padding: 10px 15px;
-        margin-right: 10px;
+        padding: 8px 12px;
       }
     }
 
@@ -96,8 +116,7 @@
       span {
         background-color: var(--third-tag);
         border-radius: 20px;
-        padding: 10px 15px;
-        margin-right: 10px;
+        padding: 8px 12px;
       }
     }
   }

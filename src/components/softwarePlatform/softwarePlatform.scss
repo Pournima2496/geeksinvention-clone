@@ -1,44 +1,53 @@
+@import "../../../mixins.scss";
+
 .softwarePlatform {
   width: 100%;
-  padding: 100px 0;
+  padding: 30px 0;
 
-  .heading {
-    margin-top: 50px;
-    padding: 0 20%;
-
-    h2 {
-      font-size: 48px;
-      font-weight: 500;
-    }
-    p {
-      margin-top: 40px;
-      font-size: 18px;
-      padding: 0 25px;
-      font-weight: 300;
-      color: #c5c2c2;
-    }
-  }
+  
   .softwarePlatform__list {
-    margin: 60px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
     flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 20px;
+
+    @include md {
+      margin: 20px 0;
+      padding: 0 50px;
+    }
 
     .sp {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      width: 50%;
 
-      img{
-        margin: 20px 0;
-        width: 100px;
-        height: 100px;
+      @include md {
+        width: 30%;
       }
 
-      span{
-        font-size: 22px;
+      img {
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+        @include md {
+          margin: 20px 0;
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      span {
+        font-size: 18px;
         font-weight: 500;
+
+        @include md {
+          font-size: 22px;
+        }
       }
     }
   }

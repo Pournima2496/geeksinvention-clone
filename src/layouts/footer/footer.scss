@@ -1,42 +1,57 @@
+@import "../../../mixins.scss";
+
 footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
 
   .footer {
-    .heading {
-      padding: 0 20%;
+    padding: 20px;
 
-      h2 {
-        font-size: 48px;
-        font-weight: 500;
-      }
-      p {
-        margin-top: 40px;
-        font-size: 18px;
-        padding: 0 25px;
-        font-weight: 300;
-        color: #c5c2c2;
+    .top {
+      padding: 0 40px;
+      margin-bottom: 60px;
+
+      @include md {
+        padding: 0;
       }
     }
     .bottom {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 50px;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
 
+      @include md {
+        justify-content: space-between;
+        padding: 0 50px;
+        flex-direction: row;
+      }
       .bottom-left {
         display: flex;
         align-items: center;
-        text-align: left;
-        width: 70%;
+        flex-direction: column;
+
+        @include md {
+          flex-direction: row;
+          text-align: left;
+          width: 70%;
+        }
 
         .left {
-          width: 60%;
+          width: 100%;
+          margin: 50px 0;
+          @include md {
+            width: 60%;
+          }
           h1 {
+            margin-bottom: 15px;
+            @include md {
+              margin-bottom: 0;
+            }
             span {
               color: #ff7903;
             }
@@ -49,26 +64,61 @@ footer {
           list-style: none;
           gap: 2rem;
           flex-wrap: wrap;
+          font-size: 15px;
           line-height: 1.4px;
+          
+          li a{
+            color: #c5c2c2;
+            text-decoration: none;
+
+            &:hover{
+              color: #fff;
+            }
+
+          }
+
+          @include md {
+            font-size: 18px;
+          }
         }
       }
       .bottom-right {
-        text-align: right;
-        width: 30%;
-        margin-left: 60px;
-        
-        .right{
-            margin-left: 60px;
-            color: var(--text-color);
-            border: 1px solid var(--text-color);
+        width: 100%;
+        margin-bottom: 30px;
 
-            border-radius: 50px;
-
-            &:hover{
-                background: var(--text-color);
-                color: var(--bg-color);
-            }
+        @include md {
+          text-align: right;
+          margin-left: 60px;
+          width: 30%;
         }
+
+        .right {
+          // margin-left: 0px;
+          color: var(--text-color);
+          border: 1px solid var(--text-color);
+
+          border-radius: 50px;
+
+          &:hover {
+            background: var(--text-color);
+            color: var(--bg-color);
+          }
+        }
+      }
+    }
+
+    .copyright {
+      margin: 10px 0;
+      font-size: 15px;
+      font-weight: 300;
+      color: #c5c2c2;
+
+      @include md {
+        margin: 0 60px;
+      }
+      @include lg{
+        margin: 60px;
+        font-size: 16px;
       }
     }
   }

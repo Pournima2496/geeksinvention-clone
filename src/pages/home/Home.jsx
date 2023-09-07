@@ -24,9 +24,9 @@ const Home = () => {
         </Button>
       </div>
 
-      {/* <Clients /> */}
-      {/* <SoftwarePlatform /> */}
-      {/* <DedicatedTeams /> */}
+      <Clients />
+      <SoftwarePlatform />
+      <DedicatedTeams />
     </div>
   );
 };
