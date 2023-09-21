@@ -5,6 +5,7 @@ import SoftwarePlatform from "../../components/softwarePlatform/SoftwarePlatform
 import DedicatedTeams from "../../components/dedicatedTeams/DedicatedTeams";
 import "./home.scss";
 import WorkList from "../../components/workList/WorkList";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
   return (
@@ -12,7 +13,12 @@ const Home = () => {
       <WorkList />
 
       {/* INFO */}
-      <div className="info">
+      <motion.div
+        className="info"
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: -100 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2>Check out more works by Geeks Invention</h2>
         <p>
           Our case studies describe design and development solutions implemented
@@ -22,7 +28,7 @@ const Home = () => {
         <Button className="info-btn">
           See all case studies <span>&rarr;</span>{" "}
         </Button>
-      </div>
+      </motion.div>
 
       <Clients />
       <SoftwarePlatform />

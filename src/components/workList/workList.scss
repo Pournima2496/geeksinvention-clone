@@ -3,10 +3,9 @@
 
 .work-list {
   width: 100%;
- 
-
   .page {
     padding: 20px;
+    height: 100%;
     @include md {
       display: flex;
       align-items: center;

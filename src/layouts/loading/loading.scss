@@ -1,0 +1,25 @@
+.loading {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+
+  h1 {
+    font-size: 40px;
+    .invention {
+      color: #ff7903;
+    }
+  }
+
+  .bouncing-ball {
+    position: absolute;
+    top: 45%;
+    right: 668px;
+    width: 10px;
+    height: 10px;
+    background: #ff7903;
+    border-radius: 50%;
+  }
+}

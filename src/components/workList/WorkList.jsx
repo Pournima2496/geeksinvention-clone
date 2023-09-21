@@ -9,7 +9,10 @@ const WorkList = () => {
     <div className="work-list">
       {data?.map((item, index) => {
         return (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1, y: -100 }}
+            transition={{ duration: 0.6 }}
             key={index}
             className={`page ${
               index === 0 ? "page1" : index === 1 ? "page2" : "page3"
@@ -19,9 +22,9 @@ const WorkList = () => {
               <>
                 <motion.div
                   className="left"
-                  initial={{ x: -500 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 1 }}
+                  // initial={{ x: -500 }}
+                  // whileInView={{ x: 0 }}
+                  // transition={{ duration: 1 }}
                 >
                   <h3>{item?.title}</h3>
                   <h5>{item?.sub_title}</h5>
@@ -37,9 +40,9 @@ const WorkList = () => {
                 </motion.div>
                 <motion.div
                   className="right"
-                  initial={{ x: 500 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 1 }}
+                  // initial={{ x: 500 }}
+                  // whileInView={{ x: 0 }}
+                  // transition={{ duration: 1 }}
                 >
                   <img src={item?.image} alt="" />
                 </motion.div>
@@ -48,17 +51,17 @@ const WorkList = () => {
               <>
                 <motion.div
                   className="left"
-                  initial={{ x: -500 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 1 }}
+                  // initial={{ x: -500 }}
+                  // whileInView={{ x: 0 }}
+                  // transition={{ duration: 1 }}
                 >
                   <img src={item?.image} alt="" />
                 </motion.div>
                 <motion.div
                   className="right"
-                  initial={{ x: 500 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 1 }}
+                  // initial={{ x: 500 }}
+                  // whileInView={{ x: 0 }}
+                  // transition={{ duration: 1 }}
                 >
                   <h3>{item?.title}</h3>
                   <h5>{item?.sub_title}</h5>
@@ -74,7 +77,7 @@ const WorkList = () => {
                 </motion.div>
               </>
             )}
-          </div>
+          </motion.div>
         );
       })}
     </div>

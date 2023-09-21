@@ -20,18 +20,18 @@
 * {
   margin: 0;
   padding: 0;
-  color: var(--text-color);
   font-family: "Poppins", sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
-
 
 .wrapper {
   background: #16181c;
   position: relative;
+  color: var(--text-color);
   overflow: hidden;
 }
 ::-webkit-scrollbar {

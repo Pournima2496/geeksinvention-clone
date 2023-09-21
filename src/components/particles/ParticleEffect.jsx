@@ -79,7 +79,7 @@ const ParticleEffect = () => {
       window.addEventListener("mousemove", this.mouseMoveHandler);
 
       this.wrapText = function (text) {
-        this.context.fillStyle = "#ffa303";
+        this.context.fillStyle = "#ff7903";
         this.context.font = this.fontSize + "px Libre Baskerville";
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
