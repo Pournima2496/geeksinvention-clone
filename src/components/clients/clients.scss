@@ -15,6 +15,7 @@
   
     @include md {
       font-size: 60px;
+      margin-top: 80px;
     }
   }
 
@@ -26,13 +27,14 @@
     gap: 2rem;
     flex-wrap: wrap;
     @include md {
-      margin-top: 80px;
+      margin-top: 30px;
     }
 
     .card {
       width: 100%;
       background: var(--card-color);
       padding: 60px 30px;
+      margin-top: 20px;
       height: 350px;
 
       @include md {
@@ -45,7 +47,6 @@
 
       img {
         width: 100%;
-        // height: 100%;
         object-fit: cover;
         margin: 20px 0;
       }

@@ -14,6 +14,7 @@
   --third-title: #a3a3a5;
   --card-color: #2e3038;
   --info-page: #16181c;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -22,6 +23,11 @@
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
 
 .wrapper {
   background: #16181c;
@@ -43,14 +49,12 @@ h2 {
   font-size: 30px;
   font-weight: 500;
 
-
   @include md {
     font-size: 40px;
     line-height: 1.4;
-
   }
   @include lg {
-    padding:  10px 0;
+    padding: 10px 0;
     font-size: 48px;
   }
 }
@@ -69,12 +73,12 @@ p {
   font-weight: 300;
   color: #c5c2c2;
 
-  @include md{
+  @include md {
     font-size: 18px;
   }
 }
 
-.dflex{
+.dflex {
   display: flex;
   align-items: center;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "./workList.scss";
 import { data } from "../../../data";
 import Button from "../button/Button";
+import { motion } from "framer-motion";
 
 const WorkList = () => {
   return (
@@ -16,7 +17,12 @@ const WorkList = () => {
           >
             {index === 0 ? (
               <>
-                <div className="left">
+                <motion.div
+                  className="left"
+                  initial={{ x: -500 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
+                >
                   <h3>{item?.title}</h3>
                   <h5>{item?.sub_title}</h5>
                   <div className="tags">
@@ -28,17 +34,32 @@ const WorkList = () => {
                   <Button className="work-list__btn">
                     See full case study &rarr;
                   </Button>
-                </div>
-                <div className="right">
+                </motion.div>
+                <motion.div
+                  className="right"
+                  initial={{ x: 500 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
+                >
                   <img src={item?.image} alt="" />
-                </div>
+                </motion.div>
               </>
             ) : (
               <>
-                <div className="left">
+                <motion.div
+                  className="left"
+                  initial={{ x: -500 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
+                >
                   <img src={item?.image} alt="" />
-                </div>
-                <div className="right">
+                </motion.div>
+                <motion.div
+                  className="right"
+                  initial={{ x: 500 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 1 }}
+                >
                   <h3>{item?.title}</h3>
                   <h5>{item?.sub_title}</h5>
                   <div className="tags">
@@ -50,7 +71,7 @@ const WorkList = () => {
                   <Button className="work-list__btn">
                     See full case study &rarr;
                   </Button>
-                </div>
+                </motion.div>
               </>
             )}
           </div>
