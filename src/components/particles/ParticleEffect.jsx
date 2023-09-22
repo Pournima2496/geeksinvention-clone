@@ -79,8 +79,8 @@ const ParticleEffect = () => {
       window.addEventListener("mousemove", this.mouseMoveHandler);
 
       this.wrapText = function (text) {
-        this.context.fillStyle = "#ff7903";
-        this.context.font = this.fontSize + "px Libre Baskerville";
+        this.context.fillStyle = "#ffb779";
+        this.context.font = this.fontSize + "px Roboto Condensed";
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
         this.context.fillText(text, this.textX, this.textY);
@@ -140,11 +140,11 @@ const ParticleEffect = () => {
   }, []);
 
   return (
- 
-        <div className="canvas">
-          <canvas ref={canvasRef} id="canvas1"></canvas>
-        </div>
-    
+    <div className="canvas">
+      <canvas ref={canvasRef} id="canvas1"></canvas>
+      <h1>EMBRACE THE FUTURE</h1>
+      <p>Welcom to the Age of Action</p>
+    </div>
   );
 };
 

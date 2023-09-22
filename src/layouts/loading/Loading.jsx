@@ -11,9 +11,7 @@ const Loading = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="bouncing-ball"
       ></motion.span>
-      <h1>
-        Geeks <span className="invention"> Invention</span>
-      </h1>
+      <h1>Geeks Invention</h1>
     </motion.div>
   );
 };
