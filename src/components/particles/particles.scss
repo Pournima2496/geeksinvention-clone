@@ -15,9 +15,13 @@
   h1 {
     position: absolute;
     font-size: 20px;
-    top: 280px;
     font-size: 50px;
-   
+    text-align: center;
+    top: 230px;
+    
+    @include md{
+      top: 280px;
+    }
   }
 
   p{
@@ -29,6 +33,7 @@
     border-radius: 5px;
     word-spacing: 2px;
     backdrop-filter: blur(3px);
+    margin-top: 40px;
   }
 
 }
